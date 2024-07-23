@@ -26,7 +26,7 @@ class InstaUnfollowers:
         input("Log in and then press Enter here to continue...")
 
     def get_unfollowers(self): 
-        print("Now let's find your fake firends!!!")
+        print("Now let's find your fake friends!!!")
         accountUrl = f"https://instagram.com/{self.username}/"
         self.driver.get(accountUrl)
         self.click_link('followers')
@@ -113,4 +113,6 @@ try:
         urls.append(url)
     wb.save("Unfollowers.xlsx")
 finally:
+    sleep(20)
+    print('An excel spreadsheet')
     bot.close_browser()
