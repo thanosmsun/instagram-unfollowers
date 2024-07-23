@@ -27,3 +27,12 @@ There is also an .exe file for those who don't want to install the whole code in
    ```sh
    git clone https://github.com/yourusername/instagram-unfollowers.git
    cd instagram-unfollowers
+
+2. Install the required Python packages:
+
+   ```sh
+   pip install -r requirements.txt
+
+3. Run the script:
+   ```sh
+   python insta_unfollowers.py
