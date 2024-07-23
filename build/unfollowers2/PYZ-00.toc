@@ -1,4 +1,4 @@
-('C:\\Users\\thano\\OneDrive\\Υπολογιστής\\unf\\build\\unfollowers2\\PYZ-00.pyz',
+('C:\\Users\\thano\\OneDrive\\Υπολογιστής\\unf\\instagram-unfollowers\\build\\unfollowers2\\PYZ-00.pyz',
  [('PIL',
    'C:\\Users\\thano\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\PIL\\__init__.py',
    'PYMODULE'),

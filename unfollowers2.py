@@ -114,5 +114,6 @@ try:
     wb.save("Unfollowers.xlsx")
 finally:
     sleep(20)
-    print('An excel spreadsheet')
+    print('There is excel spreadsheet in the same file you have stored this programm.')
+    print("There you will find all the people who don't follow you back!")
     bot.close_browser()
