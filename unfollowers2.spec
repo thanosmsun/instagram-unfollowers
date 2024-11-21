@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['c:/Users/thano/OneDrive/Υπολογιστής/unf/instagram-unfollowers/unfollowers2.py'],
+    ['unfollowers2.py'],
     pathex=[],
     binaries=[],
     datas=[],
