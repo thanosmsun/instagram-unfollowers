@@ -14,9 +14,13 @@ class InstaUnfollowers:
         self.chrome_options.add_argument("--log-level=3")  # Suppress DevTools logs
         self.chrome_options.add_argument("--ignore-certificate-errors")  # Suppress SSL errors
         self.driver = None
-        self.username = input("Please enter your Instagram username: ")
-        print("After you complete the log in press enter in the command promt.")
-        print("Don't close any window and make sure your pc doesn't close.")
+        self.username = input("Please enter your Instagram username and then press enter: ")
+        print("\nFollow these steps to use this program:")
+        print("1. Log in to Instagram in the browser window that opens.")
+        print("2. After you successfully log in, DO NOT close the browser window.")
+        print("3. Return to this program and press Enter in the terminal to continue.")
+        print("4. Ensure your PC stays on, and do not close any windows during the process.\n")
+
 
     def start_browser(self):
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=self.chrome_options)
@@ -112,8 +116,20 @@ try:
         sheet.cell(row=i+1, column=1).value = '=HYPERLINK("{}", "{}")'.format(url, name)
         urls.append(url)
     wb.save("Unfollowers.xlsx")
+   
+   # Write to TXT
+    with open("Unfollowers.txt", "w", encoding="utf-8") as txt_file:
+        for name in unfollowers:
+            txt_file.write(f"{name}\n")
+
+    print("\nDone! Here's what to do next:")
+    print("1. An Excel file 'Unfollowers.xlsx' has been created in the same folder as this program.")
+    print("   - It contains hyperlinks to the profiles of people who don't follow you back.")
+    print("2. A text file 'Unfollowers.txt' has been created in the same folder.")
+    print("   - It contains only the usernames of people who don't follow you back.")
+    print("3. Open these files to review your unfollowers list. Enjoy!")
+    print("   - This window will automatically close in 30 seconds.\n")
+
 finally:
-    sleep(20)
-    print('There is excel spreadsheet in the same file you have stored this programm.')
-    print("There you will find all the people who don't follow you back!")
+    sleep(30)
     bot.close_browser()
