@@ -35,4 +35,4 @@ There is also an .exe file for those who don't want to install the whole code in
 
 3. Run the script:
    ```sh
-   python insta_unfollowers.py
+   python unfollowers2.py
